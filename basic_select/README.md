@@ -1,4 +1,6 @@
 # Basic select important notes
+
+``` sql
 Given a table STATION that holds data for five fields namely ID, CITY, STATE, NORTHERN LATITUDE and WESTERN LONGITUDE.
 +-------------+------------+
 | Field       |   Type     |
@@ -9,6 +11,7 @@ Given a table STATION that holds data for five fields namely ID, CITY, STATE, NO
 | LAT_N       | NUMERIC    |
 | LONG_W      | NUMERIC    |
 +-------------+------------+
+```
 
 1. Basic query and operators
 ```sql
