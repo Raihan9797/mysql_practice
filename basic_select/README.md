@@ -40,3 +40,38 @@ FROM
 select count(city) - count(distinct(city))
 from station
 ```
+
+4. `ORDER BY c1 DESC, c2 [ASC]`
+```sql
+select 
+    city,
+    length(city) as len
+from station
+order by len, city
+limit 1;
+
+select 
+    city,
+    length(city) as len
+from station
+order by len desc, city
+limit 1;
+```
+* order by defaults to asc ie ascending. you need to specify descending however.
+
+5. `LIMIT n [OFFSET o]`
+```sql
+SELECT 
+    employee_id, 
+    first_name, 
+    last_name, 
+    salary
+FROM
+    employees
+ORDER BY 
+	salary DESC
+LIMIT 1 OFFSET 1;
+```
+* Offset defaults to 0. `OFFSET` is used if you wanna get values in specific indexes.
+
+![limit offset example](https://github.com/raihan9797/mysql_practice/images/limit_offset.png
