@@ -74,4 +74,4 @@ LIMIT 1 OFFSET 1;
 ```
 * Offset defaults to 0. `OFFSET` is used if you wanna get values in specific indexes.
 
-![limit offset example](https://github.com/raihan9797/mysql_practice/images/limit_offset.png
+![limit offset example](https://github.com/raihan9797/mysql_practice/blob/master/images/limit_offset.png)
