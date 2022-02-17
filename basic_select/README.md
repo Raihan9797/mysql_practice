@@ -25,7 +25,7 @@ and ID%2 = 0
 and Countrycode = "USA";
 ```
 
-2. distinct
+2. `DISTINC c1, c2`
 ```sql
 SELECT DISTINCT
     column1, column2, ...
