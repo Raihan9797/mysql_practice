@@ -89,3 +89,22 @@ from station
 where right(city, 1) in ("a", "e", "i", "o", "u")
 AND  left(city, 1) in ("a", "e", "i", "o", "u", "A", 'E', 'I','O','U')
 ```
+
+8. Multiple string conditionals: use `NOT` `AND `OR` instead of regex conditionals whenever possible
+
+9. `SUBSTR(string, start, length)`
+- You can use `right()` or `left()` if you are looking at the start or end.
+```sql
+select name 
+from students
+where marks > 75
+order by substr(name, -3, 3), id
+
+select name 
+from students
+where marks > 75
+order by right(name, 3), id
+```
+
+10.`order by c1, c2`
+- usually put at the last after filtering.
