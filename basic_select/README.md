@@ -75,3 +75,17 @@ LIMIT 1 OFFSET 1;
 * Offset defaults to 0. `OFFSET` is used if you wanna get values in specific indexes.
 
 ![limit offset example](https://github.com/raihan9797/mysql_practice/blob/master/images/limit_offset.png)
+
+6. It's possible to use `like` for string searching, but `rlike` applies to a much larger context. In the long run, it's better to use `rlike`.
+- `RLIKE` == `REGEXP`. `RLIKE` is shorter and easier to remember.
+
+7. `left()` and `right()`
+```sql
+LEFT(string, number_of_chars)
+-- eg.
+select distinct city
+from station
+-- Seems like sql doesnt care about case!
+where right(city, 1) in ("a", "e", "i", "o", "u")
+AND  left(city, 1) in ("a", "e", "i", "o", "u", "A", 'E', 'I','O','U')
+```
